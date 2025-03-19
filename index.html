@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Recipe Finder ✨</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Magic Recipe Finder</h1>
+            <p>Choose your ingredients and let the magic happen!</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Side - Pantry -->
+            <div class="pantry-section">
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Search ingredients...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="categories-grid">
+                    <!-- Pantry Essentials -->
+                    <div class="category">
+                        <i class="fas fa-box"></i>
+                        <h3>Pantry Essentials</h3>
+                        <ul>
+                            <li>Salt</li>
+                            <li>Pepper</li>
+                            <li>Sugar</li>
+                            <li>Flour</li>
+                            <li>Rice</li>
+                            <li>Pasta</li>
+                            <li>Olive Oil</li>
+                            <li>Vegetable Oil</li>
+                            <li>Vinegar</li>
+                            <li>Soy Sauce</li>
+                            <li>Ketchup</li>
+                            <li>Mustard</li>
+                            <li>Mayonnaise</li>
+                            <li>Honey</li>
+                            <li>Maple Syrup</li>
+                            <li>Baking Powder</li>
+                            <li>Baking Soda</li>
+                            <li>Cornstarch</li>
+                            <li>Vanilla Extract</li>
+                            <li>Cinnamon</li>
+                            <li>Nutmeg</li>
+                            <li>Garlic Powder</li>
+                            <li>Onion Powder</li>
+                            <li>Paprika</li>
+                            <li>Chili Powder</li>
+                            <li>Cumin</li>
+                            <li>Oregano</li>
+                            <li>Basil</li>
+                            <li>Thyme</li>
+                            <li>Rosemary</li>
+                            <li>Bay Leaves</li>
+                            <li>Black Beans</li>
+                            <li>Kidney Beans</li>
+                            <li>Chickpeas</li>
+                            <li>Lentils</li>
+                            <li>Quinoa</li>
+                            <li>Oats</li>
+                            <li>Breadcrumbs</li>
+                            <li>Crackers</li>
+                            <li>Cereal</li>
+                            <li>Peanut Butter</li>
+                            <li>Jelly</li>
+                            <li>Canned Tomatoes</li>
+                            <li>Tomato Paste</li>
+                            <li>Tomato Sauce</li>
+                            <li>Broth (Chicken, Beef, Vegetable)</li>
+                            <li>Coconut Milk</li>
+                            <li>Evaporated Milk</li>
+                            <li>Condensed Milk</li>
+                            <li>Pasta Sauce</li>
+                            <li>Pickles</li>
+                            <li>Relish</li>
+                            <li>Hot Sauce</li>
+                            <li>Worcestershire Sauce</li>
+                            <li>Fish Sauce</li>
+                            <li>Teriyaki Sauce</li>
+                            <li>BBQ Sauce</li>
+                            <li>Sriracha</li>
+                            <li>Tahini</li>
+                            <li>Sesame Oil</li>
+                            <li>Balsamic Vinegar</li>
+                            <li>Red Wine Vinegar</li>
+                            <li>Apple Cider Vinegar</li>
+                            <li>White Vinegar</li>
+                            <li>Rice Vinegar</li>
+                            <li>Mirin</li>
+                            <li>Miso Paste</li>
+                            <li>Curry Paste</li>
+                            <li>Curry Powder</li>
+                            <li>Turmeric</li>
+                            <li>Coriander</li>
+                            <li>Cardamom</li>
+                            <li>Cloves</li>
+                            <li>Allspice</li>
+                            <li>Star Anise</li>
+                            <li>Fennel Seeds</li>
+                            <li>Mustard Seeds</li>
+                            <li>Sesame Seeds</li>
+                            <li>Poppy Seeds</li>
+                            <li>Chia Seeds</li>
+                            <li>Flaxseeds</li>
+                            <li>Sunflower Seeds</li>
+                            <li>Pumpkin Seeds</li>
+                            <li>Almonds</li>
+                            <li>Walnuts</li>
+                            <li>Pecans</li>
+                            <li>Cashews</li>
+                            <li>Pistachios</li>
+                            <li>Hazelnuts</li>
+                            <li>Macadamia Nuts</li>
+                            <li>Peanuts</li>
+                            <li>Dried Fruits (Raisins, Apricots, Cranberries)</li>
+                            <li>Dried Herbs</li>
+                            <li>Dried Mushrooms</li>
+                            <li>Dried Beans</li>
+                            <li>Dried Lentils</li>
+                            <li>Dried Peas</li>
+                            <li>Dried Grains</li>
+                            <li>Dried Pasta</li>
+                            <li>Dried Rice</li>
+                            <li>Dried Noodles</li>
+                            <li>Dried Soup Mixes</li>
+                            <li>Dried Seasoning Mixes</li>
+                            <li>Dried Spice Blends</li>
+                            <li>Dried Baking Mixes</li>
+                            <li>Dried Dessert Mixes</li>
+                            <li>Dried Snack Mixes</li>
+                            <li>Dried Beverage Mixes</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Vegetables & Greens -->
+                    <div class="category">
+                        <i class="fas fa-carrot"></i>
+                        <h3>Vegetables & Greens</h3>
+                        <ul>
+                            <li>Tomato</li>
+                            <li>Spinach</li>
+                            <li>Broccoli</li>
+                            <li>Lettuce</li>
+                            <li>Kale</li>
+                            <li>Cabbage</li>
+                            <li>Carrot</li>
+                            <li>Celery</li>
+                            <li>Bell Pepper</li>
+                            <li>Zucchini</li>
+                            <li>Cucumber</li>
+                            <li>Eggplant</li>
+                            <li>Green Beans</li>
+                            <li>Peas</li>
+                            <li>Corn</li>
+                            <li>Potato</li>
+                            <li>Sweet Potato</li>
+                            <li>Onion</li>
+                            <li>Garlic</li>
+                            <li>Ginger</li>
+                            <li>Leek</li>
+                            <li>Shallot</li>
+                            <li>Radish</li>
+                            <li>Beet</li>
+                            <li>Turnip</li>
+                            <li>Rutabaga</li>
+                            <li>Parsnip</li>
+                            <li>Brussels Sprouts</li>
+                            <li>Cauliflower</li>
+                            <li>Asparagus</li>
+                            <li>Artichoke</li>
+                            <li>Fennel</li>
+                            <li>Okra</li>
+                            <li>Pumpkin</li>
+                            <li>Butternut Squash</li>
+                            <li>Acorn Squash</li>
+                            <li>Spaghetti Squash</li>
+                            <li>Collard Greens</li>
+                            <li>Swiss Chard</li>
+                            <li>Bok Choy</li>
+                            <li>Endive</li>
+                            <li>Escarole</li>
+                            <li>Arugula</li>
+                            <li>Watercress</li>
+                            <li>Mustard Greens</li>
+                            <li>Dandelion Greens</li>
+                            <li>Beet Greens</li>
+                            <li>Radicchio</li>
+                            <li>Frisee</li>
+                            <li>Napa Cabbage</li>
+                            <li>Savoy Cabbage</li>
+                            <li>Red Cabbage</li>
+                            <li>Green Cabbage</li>
+                            <li>Iceberg Lettuce</li>
+                            <li>Romaine Lettuce</li>
+                            <li>Butter Lettuce</li>
+                            <li>Boston Lettuce</li>
+                            <li>Bibb Lettuce</li>
+                            <li>Spring Mix</li>
+                            <li>Mesclun</li>
+                            <li>Baby Spinach</li>
+                            <li>Baby Kale</li>
+                            <li>Baby Arugula</li>
+                            <li>Baby Bok Choy</li>
+                            <li>Baby Greens</li>
+                            <li>Microgreens</li>
+                            <li>Sprouts</li>
+                            <li>Bean Sprouts</li>
+                            <li>Alfalfa Sprouts</li>
+                            <li>Radish Sprouts</li>
+                            <li>Broccoli Sprouts</li>
+                            <li>Sunflower Sprouts</li>
+                            <li>Pea Shoots</li>
+                            <li>Wheatgrass</li>
+                            <li>Herbs (Parsley, Cilantro, Basil, etc.)</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Mushrooms -->
+                    <div class="category">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Mushrooms</h3>
+                        <ul>
+                            <li>Button Mushrooms</li>
+                            <li>Cremini Mushrooms</li>
+                            <li>Portobello Mushrooms</li>
+                            <li>Shiitake Mushrooms</li>
+                            <li>Oyster Mushrooms</li>
+                            <li>Maitake Mushrooms</li>
+                            <li>Enoki Mushrooms</li>
+                            <li>Chanterelle Mushrooms</li>
+                            <li>Morel Mushrooms</li>
+                            <li>Truffles</li>
+                            <li>Porcini Mushrooms</li>
+                            <li>Lobster Mushrooms</li>
+                            <li>Lion's Mane Mushrooms</li>
+                            <li>King Trumpet Mushrooms</li>
+                            <li>Beech Mushrooms</li>
+                            <li>Black Trumpet Mushrooms</li>
+                            <li>Hedgehog Mushrooms</li>
+                            <li>Puffball Mushrooms</li>
+                            <li>Chicken of the Woods</li>
+                            <li>Hen of the Woods</li>
+                            <li>Reishi Mushrooms</li>
+                            <li>Cordyceps Mushrooms</li>
+                            <li>Shimeji Mushrooms</li>
+                            <li>Matsutake Mushrooms</li>
+                            <li>Wood Ear Mushrooms</li>
+                            <li>Cloud Ear Mushrooms</li>
+                            <li>Straw Mushrooms</li>
+                            <li>Pioppino Mushrooms</li>
+                            <li>Nameko Mushrooms</li>
+                            <li>Blewit Mushrooms</li>
+                            <li>Cauliflower Mushrooms</li>
+                            <li>Yellowfoot Mushrooms</li>
+                            <li>Black Morel Mushrooms</li>
+                            <li>White Morel Mushrooms</li>
+                            <li>Golden Chanterelle Mushrooms</li>
+                            <li>Black Chanterelle Mushrooms</li>
+                            <li>White Chanterelle Mushrooms</li>
+                            <li>Yellowfoot Chanterelle Mushrooms</li>
+                            <li>Blue Chanterelle Mushrooms</li>
+                            <li>Red Chanterelle Mushrooms</li>
+                            <li>Purple Chanterelle Mushrooms</li>
+                            <li>Green Chanterelle Mushrooms</li>
+                            <li>Brown Chanterelle Mushrooms</li>
+                            <li>Orange Chanterelle Mushrooms</li>
+                            <li>Pink Chanterelle Mushrooms</li>
+                            <li>Yellow Chanterelle Mushrooms</li>
+                            <li>Black Trumpet Chanterelle Mushrooms</li>
+                            <li>White Trumpet Chanterelle Mushrooms</li>
+                            <li>Yellow Trumpet Chanterelle Mushrooms</li>
+                            <li>Red Trumpet Chanterelle Mushrooms</li>
+                            <li>Purple Trumpet Chanterelle Mushrooms</li>
+                            <li>Green Trumpet Chanterelle Mushrooms</li>
+                            <li>Brown Trumpet Chanterelle Mushrooms</li>
+                            <li>Orange Trumpet Chanterelle Mushrooms</li>
+                            <li>Pink Trumpet Chanterelle Mushrooms</li>
+                            <li>Yellow Trumpet Chanterelle Mushrooms</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Fruits -->
+                    <div class="category">
+                        <i class="fas fa-apple-alt"></i>
+                        <h3>Fruits</h3>
+                        <ul>
+                            <li>Apple</li>
+                            <li>Banana</li>
+                            <li>Orange</li>
+                            <li>Strawberry</li>
+                            <li>Blueberry</li>
+                            <li>Raspberry</li>
+                            <li>Blackberry</li>
+                            <li>Cherry</li>
+                            <li>Grape</li>
+                            <li>Watermelon</li>
+                            <li>Cantaloupe</li>
+                            <li>Honeydew</li>
+                            <li>Pineapple</li>
+                            <li>Mango</li>
+                            <li>Peach</li>
+                            <li>Pear</li>
+                            <li>Plum</li>
+                            <li>Apricot</li>
+                            <li>Kiwi</li>
+                            <li>Papaya</li>
+                            <li>Guava</li>
+                            <li>Passion Fruit</li>
+                            <li>Dragon Fruit</li>
+                            <li>Pomegranate</li>
+                            <li>Lemon</li>
+                            <li>Lime</li>
+                            <li>Grapefruit</li>
+                            <li>Tangerine</li>
+                            <li>Mandarin</li>
+                            <li>Clementine</li>
+                            <li>Fig</li>
+                            <li>Date</li>
+                            <li>Persimmon</li>
+                            <li>Lychee</li>
+                            <li>Rambutan</li>
+                            <li>Star Fruit</li>
+                            <li>Jackfruit</li>
+                            <li>Durian</li>
+                            <li>Elderberry</li>
+                            <li>Goji Berry</li>
+                            <li>Mulberry</li>
+                            <li>Currant</li>
+                            <li>Cranberry</li>
+                            <li>Boysenberry</li>
+                            <li>Loganberry</li>
+                            <li>Marionberry</li>
+                            <li>Cloudberry</li>
+                            <li>Salmonberry</li>
+                            <li>Huckleberry</li>
+                            <li>Chokeberry</li>
+                            <li>Serviceberry</li>
+                            <li>Juniper Berry</li>
+                            <li>Barberry</li>
+                            <li>Gooseberry</li>
+                            <li>Lingonberry</li>
+                            <li>Bilberry</li>
+                            <li>Acai Berry</li>
+                            <li>Maqui Berry</li>
+                            <li>Camu Camu Berry</li>
+                            <li>Sea Buckthorn Berry</li>
+                            <li>Schisandra Berry</li>
+                            <li>Aronia Berry</li>
+                            <li>Elderflower</li>
+                            <li>Rose Hip</li>
+                            <li>Hawthorn Berry</li>
+                            <li>Rowan Berry</li>
+                            <li>Saskatoon Berry</li>
+                            <li>Buffaloberry</li>
+                            <li>Salal Berry</li>
+                            <li>Thimbleberry</li>
+                            <li>Wineberry</li>
+                            <li>Bearberry</li>
+                            <li>Bunchberry</li>
+                            <li>Partridgeberry</li>
+                            <li>Wintergreen Berry</li>
+                            <li>Snowberry</li>
+                            <li>Salmonberry</li>
+                            <li>Cloudberry</li>
+                            <li>Lingonberry</li>
+                            <li>Bilberry</li>
+                            <li>Huckleberry</li>
+                            <li>Chokeberry</li>
+                            <li>Serviceberry</li>
+                            <li>Juniper Berry</li>
+                            <li>Barberry</li>
+                            <li>Gooseberry</li>
+                            <li>Lingonberry</li>
+                            <li>Bilberry</li>
+                            <li>Acai Berry</li>
+                            <li>Maqui Berry</li>
+                            <li>Camu Camu Berry</li>
+                            <li>Sea Buckthorn Berry</li>
+                            <li>Schisandra Berry</li>
+                            <li>Aronia Berry</li>
+                            <li>Elderflower</li>
+                            <li>Rose Hip</li>
+                            <li>Hawthorn Berry</li>
+                            <li>Rowan Berry</li>
+                            <li>Saskatoon Berry</li>
+                            <li>Buffaloberry</li>
+                            <li>Salal Berry</li>
+                            <li>Thimbleberry</li>
+                            <li>Wineberry</li>
+                            <li>Bearberry</li>
+                            <li>Bunchberry</li>
+                            <li>Partridgeberry</li>
+                            <li>Wintergreen Berry</li>
+                            <li>Snowberry</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Berries -->
+                    <div class="category">
+                        <i class="fas fa-apple-alt"></i>
+                        <h3>Fruits & Berries</h3>
+                
+                        <ul>
+                            <li>Apple</li>
+                            <li>Banana</li>
+                            <li>Orange</li>
+                            <li>Strawberry</li>
+                            <li>Blueberry</li>
+                            <li>Raspberry</li>
+                            <li>Blackberry</li>
+                            <li>Cherry</li>
+                            <li>Grape</li>
+                            <li>Watermelon</li>
+                            <li>Cantaloupe</li>
+                            <li>Honeydew</li>
+                            <li>Pineapple</li>
+                            <li>Mango</li>
+                            <li>Peach</li>
+                            <li>Pear</li>
+                            <li>Plum</li>
+                            <li>Apricot</li>
+                            <li>Kiwi</li>
+                            <li>Papaya</li>
+                            <li>Guava</li>
+                            <li>Passion Fruit</li>
+                            <li>Dragon Fruit</li>
+                            <li>Pomegranate</li>
+                            <li>Lemon</li>
+                            <li>Lime</li>
+                            <li>Grapefruit</li>
+                            <li>Tangerine</li>
+                            <li>Mandarin</li>
+                            <li>Clementine</li>
+                            <li>Fig</li>
+                            <li>Date</li>
+                            <li>Persimmon</li>
+                            <li>Lychee</li>
+                            <li>Rambutan</li>
+                            <li>Star Fruit</li>
+                            <li>Jackfruit</li>
+                            <li>Durian</li>
+                            <li>Elderberry</li>
+                            <li>Goji Berry</li>
+                            <li>Mulberry</li>
+                            <li>Currant</li>
+                            <li>Cranberry</li>
+                            <li>Boysenberry</li>
+                            <li>Loganberry</li>
+                            <li>Marionberry</li>
+                            <li>Cloudberry</li>
+                            <li>Salmonberry</li>
+                            <li>Huckleberry</li>
+                            <li>Chokeberry</li>
+                            <li>Serviceberry</li>
+                            <li>Juniper Berry</li>
+                            <li>Barberry</li>
+                            <li>Gooseberry</li>
+                            <li>Lingonberry</li>
+                            <li>Bilberry</li>
+                            <li>Acai Berry</li>
+                            <li>Maqui Berry</li>
+                            <li>Camu Camu Berry</li>
+                            <li>Sea Buckthorn Berry</li>
+                            <li>Schisandra Berry</li>
+                            <li>Aronia Berry</li>
+                            <li>Elderflower</li>
+                            <li>Rose Hip</li>
+                            <li>Hawthorn Berry</li>
+                            <li>Rowan Berry</li>
+                            <li>Saskatoon Berry</li>
+                            <li>Buffaloberry</li>
+                            <li>Salal Berry</li>
+                            <li>Thimbleberry</li>
+                            <li>Wineberry</li>
+                            <li>Bearberry</li>
+                            <li>Bunchberry</li>
+                            <li>Partridgeberry</li>
+                            <li>Wintergreen Berry</li>
+                            <li>Snowberry</li>
+                            <li>Salmonberry</li>
+                            <li>Cloudberry</li>
+                            <li>Lingonberry</li>
+                            <li>Bilberry</li>
+                            <li>Huckleberry</li>
+                            <li>Chokeberry</li>
+                            <li>Serviceberry</li>
+                            <li>Juniper Berry</li>
+                            <li>Barberry</li>
+                            <li>Gooseberry</li>
+                            <li>Lingonberry</li>
+                            <li>Bilberry</li>
+                            <li>Acai Berry</li>
+                            <li>Maqui Berry</li>
+                            <li>Camu Camu Berry</li>
+                            <li>Sea Buckthorn Berry</li>
+                            <li>Schisandra Berry</li>
+                            <li>Aronia Berry</li>
+                            <li>Elderflower</li>
+                            <li>Rose Hip</li>
+                            <li>Hawthorn Berry</li>
+                            <li>Rowan Berry</li>
+                            <li>Saskatoon Berry</li>
+                            <li>Buffaloberry</li>
+                            <li>Salal Berry</li>
+                            <li>Thimbleberry</li>
+                            <li>Wineberry</li>
+                            <li>Bearberry</li>
+                            <li>Bunchberry</li>
+                            <li>Partridgeberry</li>
+                            <li>Wintergreen Berry</li>
+                            <li>Snowberry</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Nuts & Seeds -->
+                    <div class="category">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Nuts & Seeds</h3>
+                        <ul>
+                            <li>Almonds</li>
+                            <li>Walnuts</li>
+                            <li>Pecans</li>
+                            <li>Cashews</li>
+                            <li>Pistachios</li>
+                            <li>Hazelnuts</li>
+                            <li>Macadamia Nuts</li>
+                            <li>Peanuts</li>
+                            <li>Brazil Nuts</li>
+                            <li>Pine Nuts</li>
+                            <li>Chestnuts</li>
+                            <li>Sunflower Seeds</li>
+                            <li>Pumpkin Seeds</li>
+                            <li>Chia Seeds</li>
+                            <li>Flaxseeds</li>
+                            <li>Sesame Seeds</li>
+                            <li>Poppy Seeds</li>
+                            <li>Hemp Seeds</li>
+                            <li>Quinoa</li>
+                            <li>Amaranth</li>
+                            <li>Buckwheat</li>
+                            <li>Millet</li>
+                            <li>Teff</li>
+                            <li>Spelt</li>
+                            <li>Farro</li>
+                            <li>Barley</li>
+                            <li>Rye</li>
+                            <li>Oats</li>
+                            <li>Wheat</li>
+                            <li>Rice</li>
+                            <li>Corn</li>
+                            <li>Sorghum</li>
+                            <li>Triticale</li>
+                            <li>Kamut</li>
+                            <li>Freekeh</li>
+                            <li>Bulgur</li>
+                            <li>Couscous</li>
+                            <li>Polenta</li>
+                            <li>Grits</li>
+                            <li>Semolina</li>
+                            <li>Durum</li>
+                            <li>Einkorn</li>
+                            <li>Emmer</li>
+                            <li>Khorasan</li>
+                            <li>Spelt</li>
+                            <li>Farro</li>
+                            <li>Barley</li>
+                            <li>Rye</li>
+                            <li>Oats</li>
+                            <li>Wheat</li>
+                            <li>Rice</li>
+                            <li>Corn</li>
+                            <li>Sorghum</li>
+                            <li>Triticale</li>
+                            <li>Kamut</li>
+                            <li>Freekeh</li>
+                            <li>Bulgur</li>
+                            <li>Couscous</li>
+                            <li>Polenta</li>
+                            <li>Grits</li>
+                            <li>Semolina</li>
+                            <li>Durum</li>
+                            <li>Einkorn</li>
+                            <li>Emmer</li>
+                            <li>Khorasan</li>
+                        </ul>
+        
+                    <!-- Cheeses -->
+                    <div class="category">
+                        <i class="fas fa-cheese"></i>
+                        <h3>Cheeses</h3>
+                        <ul>
+                            <li>Cheddar</li>
+                            <li>Mozzarella</li>
+                            <li>Parmesan</li>
+                            <li>Gouda</li>
+                            <li>Brie</li>
+                            <li>Camembert</li>
+                            <li>Swiss</li>
+                            <li>Provolone</li>
+                            <li>Blue Cheese</li>
+                            <li>Feta</li>
+                            <li>Goat Cheese</li>
+                            <li>Ricotta</li>
+                            <li>Cottage Cheese</li>
+                            <li>Monterey Jack</li>
+                            <li>Pepper Jack</li>
+                            <li>Colby</li>
+                            <li>Havarti</li>
+                            <li>Muenster</li>
+                            <li>Asiago</li>
+                            <li>Fontina</li>
+                            <li>Manchego</li>
+                            <li>Gruyere</li>
+                            <li>Emmental</li>
+                            <li>Roquefort</li>
+                            <li>Stilton</li>
+                            <li>Gorgonzola</li>
+                            <li>Boursin</li>
+                            <li>Burrata</li>
+                            <li>Halloumi</li>
+                            <li>Paneer</li>
+                            <li>Queso Fresco</li>
+                            <li>Queso Blanco</li>
+                            <li>Cotija</li>
+                            <li>Oaxaca</li>
+                            <li>Chèvre</li>
+                            <li>Mascarpone</li>
+                            <li>Taleggio</li>
+                            <li>Limburger</li>
+                            <li>Raclette</li>
+                            <li>Comté</li>
+                            <li>Reblochon</li>
+                            <li>Tomme</li>
+                            <li>Edam</li>
+                            <li>Leerdammer</li>
+                            <li>Jarlsberg</li>
+                            <li>Appenzeller</li>
+                            <li>Tilsit</li>
+                            <li>Limburger</li>
+                            <li>Port Salut</li>
+                            <li>Pont-l'Évêque</li>
+                            <li>Maroilles</li>
+                            <li>Époisses</li>
+                            <li>Munster</li>
+                            <li>Chaumes</li>
+                            <li>Saint-Nectaire</li>
+                            <li>Cantal</li>
+                            <li>Salers</li>
+                            <li>Laguiole</li>
+                            <li>Beaufort</li>
+                            <li>Abondance</li>
+                            <li>Roquefort</li>
+                            <li>Fourme d'Ambert</li>
+                            <li>Bleu d'Auvergne</li>
+                            <li>Bleu des Causses</li>
+                            <li>Bleu de Gex</li>
+                            <li>Bleu du Vercors-Sassenage</li>
+                            <li>Bleu de Laqueuille</li>
+                            <li>Bleu de Termignon</li>
+                            <li>Bleu de Bonneval</li>
+                            <li>Bleu de Chèvre</li>
+                            <li>Bleu de Brebis</li>
+                            <li>Bleu de Vache</li>
+                            <li>Bleu de Montbéliard</li>
+                            <li>Bleu de Gascogne</li>
+                            <li>Bleu de Tignes</li>
+                            <li>Bleu de Sassenage</li>
+                            <li>Bleu de Septmoncel</li>
+                            <li>Bleu de Thônes</li>
+                            <li>Bleu de Termignon</li>
+                            <li>Bleu de Laqueuille</li>
+                            <li>Bleu de Bonneval</li>
+                            <li>Bleu de Chèvre</li>
+                            <li>Bleu de Brebis</li>
+                            <li>Bleu de Vache</li>
+                            <li>Bleu de Montbéliard</li>
+                            <li>Bleu de Gascogne</li>
+                            <li>Bleu de Tignes</li>
+                            <li>Bleu de Sassenage</li>
+                            <li>Bleu de Septmoncel</li>
+                            <li>Bleu de Thônes</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Dairy & Eggs -->
+                    <div class="category">
+                        <i class="fas fa-egg"></i>
+                        <h3>Dairy & Eggs</h3>
+                        <ul>
+                            <li>Milk</li>
+                            <li>Butter</li>
+                            <li>Yogurt</li>
+                            <li>Cream</li>
+                            <li>Sour Cream</li>
+                            <li>Whipping Cream</li>
+                            <li>Heavy Cream</li>
+                            <li>Half-and-Half</li>
+                            <li>Buttermilk</li>
+                            <li>Condensed Milk</li>
+                            <li>Evaporated Milk</li>
+                            <li>Powdered Milk</li>
+                            <li>Goat Milk</li>
+                            <li>Sheep Milk</li>
+                            <li>Buffalo Milk</li>
+                            <li>Camel Milk</li>
+                            <li>Almond Milk</li>
+                            <li>Soy Milk</li>
+                            <li>Oat Milk</li>
+                            <li>Rice Milk</li>
+                            <li>Coconut Milk</li>
+                            <li>Cashew Milk</li>
+                            <li>Hemp Milk</li>
+                            <li>Flax Milk</li>
+                            <li>Macadamia Milk</li>
+                            <li>Quark</li>
+                            <li>Kefir</li>
+                            <li>Clotted Cream</li>
+                            <li>Crème Fraîche</li>
+                            <li>Fromage Blanc</li>
+                            <li>Mascarpone</li>
+                            <li>Ricotta</li>
+                            <li>Cottage Cheese</li>
+                            <li>Cream Cheese</li>
+                            <li>Neufchâtel</li>
+                            <li>Feta</li>
+                            <li>Goat Cheese</li>
+                            <li>Blue Cheese</li>
+                            <li>Brie</li>
+                            <li>Camembert</li>
+                            <li>Cheddar</li>
+                            <li>Gouda</li>
+                            <li>Swiss</li>
+                            <li>Provolone</li>
+                            <li>Mozzarella</li>
+                            <li>Parmesan</li>
+                            <li>Pecorino</li>
+                            <li>Manchego</li>
+                            <li>Gruyere</li>
+                            <li>Emmental</li>
+                            <li>Roquefort</li>
+                            <li>Stilton</li>
+                            <li>Gorgonzola</li>
+                            <li>Boursin</li>
+                            <li>Burrata</li>
+                            <li>Halloumi</li>
+                            <li>Paneer</li>
+                            <li>Queso Fresco</li>
+                            <li>Queso Blanco</li>
+                            <li>Cotija</li>
+                            <li>Oaxaca</li>
+                            <li>Chèvre</li>
+                            <li>Mascarpone</li>
+                            <li>Taleggio</li>
+                            <li>Limburger</li>
+                            <li>Raclette</li>
+                            <li>Comté</li>
+                            <li>Reblochon</li>
+                            <li>Tomme</li>
+                            <li>Edam</li>
+                            <li>Leerdammer</li>
+                            <li>Jarlsberg</li>
+                            <li>Appenzeller</li>
+                            <li>Tilsit</li>
+                            <li>Limburger</li>
+                            <li>Port Salut</li>
+                            <li>Pont-l'Évêque</li>
+                            <li>Maroilles</li>
+                            <li>Époisses</li>
+                            <li>Munster</li>
+                            <li>Chaumes</li>
+                            <li>Saint-Nectaire</li>
+                            <li>Cantal</li>
+                            <li>Salers</li>
+                            <li>Laguiole</li>
+                            <li>Beaufort</li>
+                            <li>Abondance</li>
+                            <li>Roquefort</li>
+                            <li>Fourme d'Ambert</li>
+                            <li>Bleu d'Auvergne</li>
+                            <li>Bleu des Causses</li>
+                            <li>Bleu de Gex</li>
+                            <li>Bleu du Vercors-Sassenage</li>
+                            <li>Bleu de Laqueuille</li>
+                            <li>Bleu de Termignon</li>
+                            <li>Bleu de Bonneval</li>
+                            <li>Bleu de Chèvre</li>
+                            <li>Bleu de Brebis</li>
+                            <li>Bleu de Vache</li>
+                            <li>Bleu de Montbéliard</li>
+                            <li>Bleu de Gascogne</li>
+                            <li>Bleu de Tignes</li>
+                            <li>Bleu de Sassenage</li>
+                            <li>Bleu de Septmoncel</li>
+                            <li>Bleu de Thônes</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Dairy-Free & Meat Substitutes -->
+                    <div class="category">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Dairy-Free & Meat Substitutes</h3>
+                        <ul>
+                            <li>Almond Milk</li>
+                            <li>Soy Milk</li>
+                            <li>Oat Milk</li>
+                            <li>Rice Milk</li>
+                            <li>Coconut Milk</li>
+                            <li>Cashew Milk</li>
+                            <li>Hemp Milk</li>
+                            <li>Flax Milk</li>
+                            <li>Macadamia Milk</li>
+                            <li>Quark</li>
+                            <li>Kefir</li>
+                            <li>Clotted Cream</li>
+                            <li>Crème Fraîche</li>
+                            <li>Fromage Blanc</li>
+                            <li>Mascarpone</li>
+                            <li>Ricotta</li>
+                            <li>Cottage Cheese</li>
+                            <li>Cream Cheese</li>
+                            <li>Neufchâtel</li>
+                            <li>Feta</li>
+                            <li>Goat Cheese</li>
+                            <li>Blue Cheese</li>
+                            <li>Brie</li>
+                            <li>Camembert</li>
+                            <li>Cheddar</li>
+                            <li>Gouda</li>
+                            <li>Swiss</li>
+                            <li>Provolone</li>
+                            <li>Mozzarella</li>
+                            <li>Parmesan</li>
+                            <li>Pecorino</li>
+                            <li>Manchego</li>
+                            <li>Gruyere</li>
+                            <li>Emmental</li>
+                            <li>Roquefort</li>
+                            <li>Stilton</li>
+                            <li>Gorgonzola</li>
+                            <li>Boursin</li>
+                            <li>Burrata</li>
+                            <li>Halloumi</li>
+                            <li>Paneer</li>
+                            <li>Queso Fresco</li>
+                            <li>Queso Blanco</li>
+                            <li>Cotija</li>
+                            <li>Oaxaca</li>
+                            <li>Chèvre</li>
+                            <li>Mascarpone</li>
+                            <li>Taleggio</li>
+                            <li>Limburger</li>
+                            <li>Raclette</li>
+                            <li>Comté</li>
+                            <li>Reblochon</li>
+                            <li>Tomme</li>
+                            <li>Edam</li>
+                            <li>Leerdammer</li>
+                            <li>Jarlsberg</li>
+                            <li>Appenzeller</li>
+                            <li>Tilsit</li>
+                            <li>Limburger</li>
+                            <li>Port Salut</li>
+                            <li>Pont-l'Évêque</li>
+                            <li>Maroilles</li>
+                            <li>Époisses</li>
+                            <li>Munster</li>
+                            <li>Chaumes</li>
+                            <li>Saint-Nectaire</li>
+                            <li>Cantal</li>
+                            <li>Salers</li>
+                            <li>Laguiole</li>
+                            <li>Beaufort</li>
+                            <li>Abondance</li>
+                            <li>Roquefort</li>
+                            <li>Fourme d'Ambert</li>
+                            <li>Bleu d'Auvergne</li>
+                            <li>Bleu des Causses</li>
+                            <li>Bleu de Gex</li>
+                            <li>Bleu du Vercors-Sassenage</li>
+                            <li>Bleu de Laqueuille</li>
+                            <li>Bleu de Termignon</li>
+                            <li>Bleu de Bonneval</li>
+                            <li>Bleu de Chèvre</li>
+                            <li>Bleu de Brebis</li>
+                            <li>Bleu de Vache</li>
+                            <li>Bleu de Montbéliard</li>
+                            <li>Bleu de Gascogne</li>
+                            <li>Bleu de Tignes</li>
+                            <li>Bleu de Sassenage</li>
+                            <li>Bleu de Septmoncel</li>
+                            <li>Bleu de Thônes</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Meats -->
+                    <div class="category">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <h3>Meats</h3>
+                        <ul>
+                            <li>Beef</li>
+                            <li>Pork</li>
+                            <li>Lamb</li>
+                            <li>Veal</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Poultry -->
+                    <div class="category">
+                        <i class="fas fa-drumstick-bite"></i>
+                        <h3>Poultry</h3>
+                        <ul>
+                            <li>Chicken</li>
+                            <li>Turkey</li>
+                            <li>Duck</li>
+                            <li>Quail</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Fish, Seafood & Seaweed -->
+                    <div class="category">
+                        <i class="fas fa-fish"></i>
+                        <h3>Fish, Seafood & Seaweed</h3>
+                        <ul>
+                            <li>Salmon</li>
+                            <li>Shrimp</li>
+                            <li>Tuna</li>
+                            <li>Nori</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Herbs & Spices -->
+                    <div class="category">
+                        <i class="fas fa-mortar-pestle"></i>
+                        <h3>Herbs & Spices</h3>
+                        <ul>
+                            <li>Basil</li>
+                            <li>Oregano</li>
+                            <li>Thyme</li>
+                            <li>Cinnamon</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Seasonings & Spice Blends -->
+                    <div class="category">
+                        <i class="fas fa-mortar-pestle"></i>
+                        <h3>Seasonings & Spice Blends</h3>
+                        <ul>
+                            <li>Curry Powder</li>
+                            <li>Taco Seasoning</li>
+                            <li>Italian Blend</li>
+                            <li>Garam Masala</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Baking -->
+                    <div class="category">
+                        <i class="fas fa-cookie"></i>
+                        <h3>Baking</h3>
+                        <ul>
+                            <li>Flour</li>
+                            <li>Baking Powder</li>
+                            <li>Vanilla Extract</li>
+                            <li>Cocoa Powder</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Pre-Made Doughs & Wrappers -->
+                    <div class="category">
+                        <i class="fas fa-bread-slice"></i>
+                        <h3>Pre-Made Doughs & Wrappers</h3>
+                        <ul>
+                            <li>Pizza Dough</li>
+                            <li>Pie Crust</li>
+                            <li>Wonton Wrappers</li>
+                            <li>Puff Pastry</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Grains & Cereals -->
+                    <div class="category">
+                        <i class="fas fa-wheat"></i>
+                        <h3>Grains & Cereals</h3>
+                        <ul>
+                            <li>Rice</li>
+                            <li>Quinoa</li>
+                            <li>Oats</li>
+                            <li>Barley</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Legumes -->
+                    <div class="category">
+                        <i class="fas fa-seedling"></i>
+                        <h3>Legumes</h3>
+                        <ul>
+                            <li>Lentils</li>
+                            <li>Chickpeas</li>
+                            <li>Black Beans</li>
+                            <li>Kidney Beans</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Pasta -->
+                    <div class="category">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Pasta</h3>
+                        <ul>
+                            <li>Spaghetti</li>
+                            <li>Penne</li>
+                            <li>Fettuccine</li>
+                            <li>Lasagna</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Bread & Salty Snacks -->
+                    <div class="category">
+                        <i class="fas fa-bread-slice"></i>
+                        <h3>Bread & Salty Snacks</h3>
+                        <ul>
+                            <li>Baguette</li>
+                            <li>Crackers</li>
+                            <li>Chips</li>
+                            <li>Pretzels</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Oils & Fats -->
+                    <div class="category">
+                        <i class="fas fa-tint"></i>
+                        <h3>Oils & Fats</h3>
+                        <ul>
+                            <li>Olive Oil</li>
+                            <li>Coconut Oil</li>
+                            <li>Butter</li>
+                            <li>Ghee</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Dressings & Vinegars -->
+                    <div class="category">
+                        <i class="fas fa-wine-bottle"></i>
+                        <h3>Dressings & Vinegars</h3>
+                        <ul>
+                            <li>Balsamic</li>
+                            <li>Ranch</li>
+                            <li>Italian Dressing</li>
+                            <li>Apple Cider Vinegar</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Condiments -->
+                    <div class="category">
+                        <i class="fas fa-bottle-water"></i>
+                        <h3>Condiments</h3>
+                        <ul>
+                            <li>Ketchup</li>
+                            <li>Mustard</li>
+                            <li>Mayonnaise</li>
+                            <li>Hot Sauce</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Canned Food -->
+                    <div class="category">
+                        <i class="fas fa-can-food"></i>
+                        <h3>Canned Food</h3>
+                        <ul>
+                            <li>Tomatoes</li>
+                            <li>Tuna</li>
+                            <li>Corn</li>
+                            <li>Beans</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Sauces, Spreads & Dips -->
+                    <div class="category">
+                        <i class="fas fa-utensils"></i>
+                        <h3>Sauces, Spreads & Dips</h3>
+                        <ul>
+                            <li>Hummus</li>
+                            <li>Pesto</li>
+                            <li>Salsa</li>
+                            <li>Guacamole</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Soups, Stews & Stocks -->
+                    <div class="category">
+                        <i class="fas fa-soup"></i>
+                        <h3>Soups, Stews & Stocks</h3>
+                        <ul>
+                            <li>Chicken Stock</li>
+                            <li>Vegetable Broth</li>
+                            <li>Tomato Soup</li>
+                            <li>Beef Stew</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Desserts & Sweet Snacks -->
+                    <div class="category">
+                        <i class="fas fa-cookie-bite"></i>
+                        <h3>Desserts & Sweet Snacks</h3>
+                        <ul>
+                            <li>Chocolate</li>
+                            <li>Cookies</li>
+                            <li>Ice Cream</li>
+                            <li>Candy</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Wine, Beer & Spirits -->
+                    <div class="category">
+                        <i class="fas fa-wine-glass"></i>
+                        <h3>Wine, Beer & Spirits</h3>
+                        <ul>
+                            <li>Red Wine</li>
+                            <li>White Wine</li>
+                            <li>Beer</li>
+                            <li>Vodka</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Beverages -->
+                    <div class="category">
+                        <i class="fas fa-glass-water"></i>
+                        <h3>Beverages</h3>
+                        <ul>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                            <li>Juice</li>
+                            <li>Soda</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Supplements & Extracts -->
+                    <div class="category">
+                        <i class="fas fa-pills"></i>
+                        <h3>Supplements & Extracts</h3>
+                        <ul>
+                            <li>Protein Powder</li>
+                            <li>Vanilla Extract</li>
+                            <li>Vitamins</li>
+                            <li>Collagen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Selected Ingredients and Recipes -->
+            <div class="cooking-section">
+                <div class="selected-ingredients">
+                    <h2>🧪 Choose Your Ingredients</h2>
+                    <div class="selected-container">
+                        <ul id="selected-list"></ul>
+                        <div class="custom-ingredient">
+                            <input type="text" id="custom-ingredient" placeholder="Add a secret ingredient...">
+                            <button id="add-custom"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="generate-recipes" class="generate-btn">
+                    <span class="btn-text">✨ Create Magic Recipes ✨</span>
+                    <div class="cooking-animation">
+                        <i class="fas fa-mortar-pestle"></i>
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                </button>
+
+                <div id="recipe-list" class="recipe-results"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> +960 9795529</p>
+                        <p><i class="fas fa-envelope"></i> retey.ay@hotmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Lh. Hinnavaru', Maldives</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/Abdulrahman" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/abdul-rahman-gasim-54862182/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://instagram.com/retey1447" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <p class="copyright">&copy; 2024 Abdul Rahman Gasim. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+<script src="script.js"></script>
+</body>
+</html>
