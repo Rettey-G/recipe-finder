@@ -380,3 +380,78 @@ function handleError() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', loadFromLocalStorage);
+
+document.getElementById('language-select').addEventListener('change', function() {
+    const selectedLang = this.value;
+    updatePageLanguage(selectedLang);
+});
+
+function updatePageLanguage(lang) {
+    // Update text content
+    document.querySelector('h1').textContent = translations[lang].title;
+    document.querySelector('header p').textContent = translations[lang].subtitle;
+    
+    // Update placeholders
+    document.getElementById('search-input').placeholder = translations[lang].searchPlaceholder;
+    
+    // Update categories and ingredients
+    document.querySelectorAll('.category h3').forEach(header => {
+        const categoryKey = header.getAttribute('data-category');
+        header.textContent = translations[lang].categories[categoryKey];
+    });
+    
+    // Update ingredients
+    document.querySelectorAll('.category li').forEach(item => {
+        const ingredientKey = item.getAttribute('data-ingredient');
+        item.textContent = translations[lang].ingredients[ingredientKey];
+    });
+}
+
+// Add these functions after your existing code
+
+function printRecipe() {
+    window.print();
+}
+
+async function shareRecipe(title) {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: title,
+                text: `Check out this recipe: ${title}`,
+                url: window.location.href
+            });
+            showToast('Recipe shared successfully!');
+        } catch (error) {
+            if (error.name !== 'AbortError') {
+                showToast('Failed to share recipe');
+            }
+        }
+    } else {
+        // Fallback for browsers that don't support Web Share API
+        const tempInput = document.createElement('input');
+        tempInput.value = window.location.href;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        showToast('Recipe link copied to clipboard!');
+    }
+}
+
+// Add support for keyboard navigation in modal
+function handleModalKeyboard(event, modal) {
+    if (event.key === 'Escape') {
+        document.body.removeChild(modal);
+    }
+}
+
+// Update initializeModalListeners function
+function initializeModalListeners(modal) {
+    const closeBtn = modal.querySelector('.close-modal');
+    closeBtn.addEventListener('click', () => document.body.removeChild(modal));
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) document.body.removeChild(modal);
+    });
+    document.addEventListener('keydown', (e) => handleModalKeyboard(e, modal));
+}
