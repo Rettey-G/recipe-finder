@@ -6,15 +6,43 @@ const addCustomButton = document.getElementById('add-custom');
 const selectedList = document.getElementById('selected-list');
 const recipeList = document.getElementById('recipe-list');
 const generateButton = document.getElementById('generate-recipes');
+const pantrySection = document.querySelector('.pantry-section');
 
 let selectedIngredients = [];
 let favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
+
+// Mobile menu toggle
+const mobileToggle = document.createElement('div');
+mobileToggle.className = 'mobile-toggle';
+mobileToggle.innerHTML = `
+    <button id="toggle-pantry">
+        <i class="fas fa-bars"></i> Ingredients
+    </button>
+`;
+document.body.appendChild(mobileToggle);
+
+// Mobile menu functionality
+document.getElementById('toggle-pantry')?.addEventListener('click', function() {
+    pantrySection.classList.toggle('active');
+});
+
+// Close pantry when clicking outside
+document.addEventListener('click', function(e) {
+    if (!pantrySection.contains(e.target) && 
+        !e.target.closest('#toggle-pantry') && 
+        window.innerWidth <= 768) {
+        pantrySection.classList.remove('active');
+    }
+});
 
 // Initialize category items
 document.querySelectorAll('.category li').forEach(item => {
     item.addEventListener('click', () => {
         const ingredient = item.textContent.trim();
         toggleIngredient(ingredient);
+        if (window.innerWidth <= 768) {
+            pantrySection.classList.remove('active');
+        }
     });
 });
 
@@ -253,6 +281,7 @@ async function showRecipeDetails(recipeId) {
             </div>
         </div>`;
     document.body.appendChild(modal);
+    document.body.style.overflow = 'hidden';
 
     try {
         const recipe = await getRecipeDetails(recipeId);
@@ -364,9 +393,37 @@ function showToast(message) {
 
 function initializeModalListeners(modal) {
     const closeBtn = modal.querySelector('.close-modal');
-    closeBtn.addEventListener('click', () => document.body.removeChild(modal));
+    closeBtn.addEventListener('click', () => {
+        document.body.removeChild(modal);
+        document.body.style.overflow = '';
+    });
+    
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) document.body.removeChild(modal);
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Add touch events for mobile
+    let touchStartY = 0;
+    modal.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+    });
+
+    modal.addEventListener('touchmove', (e) => {
+        const touchDiff = touchStartY - e.touches[0].clientY;
+        if (touchDiff < -50) {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+        }
     });
 }
 
@@ -379,82 +436,50 @@ function handleError() {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', loadFromLocalStorage);
-
-document.getElementById('language-select').addEventListener('change', function() {
-    const selectedLang = this.value;
-    updatePageLanguage(selectedLang);
-});
-
-function updatePageLanguage(lang) {
-    // Update text content
-    document.querySelector('h1').textContent = translations[lang].title;
-    document.querySelector('header p').textContent = translations[lang].subtitle;
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadFromLocalStorage();
     
-    // Update placeholders
-    document.getElementById('search-input').placeholder = translations[lang].searchPlaceholder;
+    // Initialize mobile menu
+    const pantrySection = document.querySelector('.pantry-section');
+    const mobileToggle = document.createElement('div');
+    mobileToggle.className = 'mobile-toggle';
+    mobileToggle.innerHTML = `
+        <button id="toggle-pantry">
+            <i class="fas fa-bars"></i> Ingredients
+        </button>
+    `;
     
-    // Update categories and ingredients
-    document.querySelectorAll('.category h3').forEach(header => {
-        const categoryKey = header.getAttribute('data-category');
-        header.textContent = translations[lang].categories[categoryKey];
+    if (window.innerWidth <= 768) {
+        document.body.appendChild(mobileToggle);
+    }
+
+    // Mobile menu toggle functionality
+    document.getElementById('toggle-pantry')?.addEventListener('click', function() {
+        pantrySection.classList.toggle('active');
     });
-    
-    // Update ingredients
-    document.querySelectorAll('.category li').forEach(item => {
-        const ingredientKey = item.getAttribute('data-ingredient');
-        item.textContent = translations[lang].ingredients[ingredientKey];
-    });
-}
 
-// Add these functions after your existing code
-
-function printRecipe() {
-    window.print();
-}
-
-async function shareRecipe(title) {
-    if (navigator.share) {
-        try {
-            await navigator.share({
-                title: title,
-                text: `Check out this recipe: ${title}`,
-                url: window.location.href
-            });
-            showToast('Recipe shared successfully!');
-        } catch (error) {
-            if (error.name !== 'AbortError') {
-                showToast('Failed to share recipe');
-            }
+    // Close pantry when clicking outside on mobile
+    document.addEventListener('click', function(e) {
+        if (!pantrySection.contains(e.target) && 
+            !e.target.closest('#toggle-pantry') && 
+            window.innerWidth <= 768) {
+            pantrySection.classList.remove('active');
         }
-    } else {
-        // Fallback for browsers that don't support Web Share API
-        const tempInput = document.createElement('input');
-        tempInput.value = window.location.href;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        showToast('Recipe link copied to clipboard!');
-    }
-}
-
-// Add support for keyboard navigation in modal
-function handleModalKeyboard(event, modal) {
-    if (event.key === 'Escape') {
-        document.body.removeChild(modal);
-    }
-}
-
-// Update initializeModalListeners function
-function initializeModalListeners(modal) {
-    const closeBtn = modal.querySelector('.close-modal');
-    closeBtn.addEventListener('click', () => document.body.removeChild(modal));
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) document.body.removeChild(modal);
     });
-    document.addEventListener('keydown', (e) => handleModalKeyboard(e, modal));
-}
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.nav-links').classList.toggle('active');
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            pantrySection.classList.remove('active');
+        }
+    });
+
+    // Initialize language selector if present
+    const languageSelect = document.getElementById('language-select');
+    if (languageSelect) {
+        const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+        languageSelect.value = savedLang;
+        updatePageLanguage(savedLang);
+    }
 });

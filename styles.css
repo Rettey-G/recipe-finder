@@ -772,123 +772,175 @@ header h1 {
         white-space: normal;
     }
 }
-
-
-/* Mobile Responsive Styles */
+/* Tablet and Mobile Base Styles */
 @media screen and (max-width: 768px) {
-    .container {
+    /* Layout */
+    .main-content {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 10px;
+    }
+
+    /* Header */
+    header {
         padding: 10px;
     }
 
-    .main-content {
-        flex-direction: column;
+    header h1 {
+        font-size: 1.5rem;
     }
 
+    /* Pantry Section */
     .pantry-section {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
+        padding: 8px;
+        position: sticky;
+        top: 60px;
+        height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
+    .category {
+        padding: 6px;
+        margin-bottom: 6px;
+    }
+
+    .category h3 {
+        font-size: 0.75rem;
+    }
+
+    .category ul {
+        columns: 3;
+        column-gap: 4px;
+    }
+
+    .category li {
+        font-size: 0.55rem;
+        padding: 3px 4px;
+        margin: 1px 0;
+    }
+
+    /* Right Side Content */
     .cooking-section {
-        width: 100%;
+        padding: 5px;
     }
 
-    .categories-grid {
+    /* Selected Ingredients */
+    .selected-ingredients {
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    #selected-list {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    #selected-list li {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    /* Generate Button */
+    .generate-btn {
+        padding: 8px;
+        font-size: 0.85rem;
+        margin: 8px 0;
+    }
+
+    /* Recipe Results */
+    .recipe-category-title {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .recipe-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    .category {
-        padding: 15px;
-    }
-
-    .search-bar {
-        flex-direction: row;
-        margin-bottom: 15px;
-    }
-
-    .search-bar input {
-        width: calc(100% - 50px);
-    }
-
-    .selected-ingredients {
-        padding: 15px;
-    }
-
-    .selected-container {
-        max-height: 200px;
-    }
-
-    .generate-btn {
-        width: 100%;
-        padding: 15px;
-        font-size: 1.1rem;
-    }
-
-    .recipe-results {
-        grid-template-columns: 1fr;
-    }
-
     .recipe-card {
-        margin: 10px 0;
+        display: grid;
+        grid-template-columns: 140px 1fr;
+        height: auto;
+        gap: 10px;
     }
 
-    /* Footer Mobile Styles */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
+    .recipe-image {
+        padding-top: 0;
+        height: 140px;
     }
 
-    .footer-section {
-        margin: 10px 0;
-        width: 100%;
+    .recipe-content {
+        padding: 10px;
     }
 
-    .social-links {
-        justify-content: center;
+    .recipe-content h4 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
     }
 
-    /* Language Selector Mobile */
-    .language-selector {
-        position: absolute;
-        top: 10px;
-        right: 10px;
+    .recipe-stats {
+        font-size: 0.75rem;
+        padding-top: 8px;
     }
 
-    /* Header Mobile Styles */
-    header {
-        padding: 60px 15px 20px;
-        text-align: center;
+    /* Modal Styles */
+    .modal-content {
+        grid-template-columns: 1fr;
+        height: 95vh;
     }
 
-    header h1 {
-        font-size: 1.8rem;
-        margin-top: 20px;
+    .recipe-detail-image {
+        height: 200px;
+    }
+
+    .recipe-detail-content {
+        padding: 20px;
+    }
+
+    .recipe-detail-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .recipe-meta-info {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .ingredients-section,
+    .instructions-section {
+        padding: 15px;
+        margin: 15px 0;
     }
 }
 
 /* Small Mobile Devices */
 @media screen and (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
+    .main-content {
+        grid-template-columns: 1fr;
     }
 
-    .category h3 {
-        font-size: 1.1rem;
+    .pantry-section {
+        height: auto;
+        max-height: 300px;
+        position: relative;
+        top: 0;
     }
 
-    .generate-btn {
-        font-size: 1rem;
-        padding: 12px;
+    .category ul {
+        columns: 2;
     }
 
-    .footer-content {
-        padding: 15px;
+    .recipe-card {
+        grid-template-columns: 1fr;
     }
-}
-@media screen and (max-width: 480px) {
-    #selected-list {
-        grid-template-columns: repeat(2, 1fr);
+
+    .recipe-image {
+        height: 180px;
+    }
+
+    .recipe-detail-image {
+        height: 160px;
     }
 }}
