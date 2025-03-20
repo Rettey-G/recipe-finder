@@ -455,3 +455,6 @@ function initializeModalListeners(modal) {
     });
     document.addEventListener('keydown', (e) => handleModalKeyboard(e, modal));
 }
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.nav-links').classList.toggle('active');
+});
